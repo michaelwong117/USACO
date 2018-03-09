@@ -30,7 +30,7 @@ int LISfast(vector<int> &v) {
             tail[length++] = v[i];
         else{
             // v[i] will become end candidate of an existing subsequence or
-            // Throw away larger elements in all LIS, to make room for upcoming grater elements than v[i]
+            // Throw away larger elements in all LIS, to make room for upcoming greater elements than v[i]
             // (and also, v[i] would have already appeared in one of LIS, identify the location and replace it)
             int lb = lower_bound(tail.begin(), tail.begin()+length, v[i]) - tail.begin();
             tail[lb] = v[i];
